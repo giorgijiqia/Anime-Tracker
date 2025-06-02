@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="mb-3">All Animes</h2>
+
+<form method="get" action="{{ url_for('index') }}" class="search-bar">
+    <input type="text" name="q" class="form-control" placeholder="Search by title or genre..." value="{{ request.args.get('q', '') }}">
+</form>
+
+<div class="row">
+    {% for anime in animes %}
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/' + anime.image) }}" class="card-img-top" height="300">
+            <div class="card-body">
+                <h5 class="card-title">{{ anime.title }}</h5>
+                <p class="card-text">{{ anime.genre }} | {{ anime.release_year }}</p>
+                <div>
+                    <a href="/add/{{ anime.id }}/plan_to_watch" class="btn btn-outline-primary btn-sm">Plan to Watch</a>
+                    <a href="/add/{{ anime.id }}/watching" class="btn btn-outline-warning btn-sm">Watching</a>
+                    <a href="/add/{{ anime.id }}/watched" class="btn btn-outline-success btn-sm">Watched</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <p>No animes found matching your search.</p>
+    {% endfor %}
+</div>
+{% endblock %}

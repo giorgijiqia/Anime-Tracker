@@ -1,0 +1,113 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eef2f7;/
+    color: #333;
+    padding: 20px;
+    margin: 0;
+}
+
+nav.navbar {
+    background-color: #5a4e7c;
+}
+
+nav.navbar .navbar-brand,
+nav.navbar .nav-link,
+nav.navbar .navbar-text {
+    color: #f1f1f1;
+}
+
+nav.navbar .nav-link:hover {
+    color: #c7b8f5;
+}
+
+nav.navbar .btn-dark {
+    background-color: #362a58;
+    border: none;
+}
+
+nav.navbar .btn-dark:hover {
+    background-color: #574a80;
+}
+
+.card {
+    box-shadow: 0 4px 12px rgba(90, 78, 124, 0.15);
+    border-radius: 12px;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+h2, h4 {
+    color: #5a4e7c;
+}
+
+.btn-outline-primary {
+    color: #5a4e7c;
+    border-color: #5a4e7c;
+}
+
+.btn-outline-primary:hover {
+    background-color: #5a4e7c;
+    color: white;
+    border-color: #5a4e7c;
+}
+
+.btn-outline-warning {
+    color: #a67c00;
+    border-color: #a67c00;
+}
+
+.btn-outline-warning:hover {
+    background-color: #a67c00;
+    color: white;
+    border-color: #a67c00;
+}
+
+.btn-outline-success {
+    color: #3a7d44;
+    border-color: #3a7d44;
+}
+
+.btn-outline-success:hover {
+    background-color: #3a7d44;
+    color: white;
+    border-color: #3a7d44;
+}
+
+.form-control:focus {
+    border-color: #5a4e7c;
+    box-shadow: 0 0 8px rgba(90, 78, 124, 0.4);
+    outline: none;
+}
+
+.search-bar {
+    max-width: 400px;
+    margin-bottom: 30px;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
+        url('/static/images/8306.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #2c3e50;
+    padding: 20px;
+    margin: 0;
+    min-height: 100vh;
+}
+nav.navbar .btn-dark {
+    background-color: #000 !important;
+    border: none;
+    color: white;
+}
+
+nav.navbar .btn-dark:hover {
+    background-color: #333 !important;
+}

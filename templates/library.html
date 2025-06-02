@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="mb-3">{{ status.replace("_", " ").title() }} Library</h2>
+<div class="row">
+    {% for anime in animes %}
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/' + anime.image) }}" class="card-img-top" height="300">
+            <div class="card-body">
+                <h5 class="card-title">{{ anime.title }}</h5>
+                <p class="card-text">{{ anime.genre }} | {{ anime.release_year }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
